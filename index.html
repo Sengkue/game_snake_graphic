@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gram Snack Graphic</title>
+    <style>
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+
+        .gram {
+          position: relative;
+          width: 100px;
+          height: 150px;
+          background-color: #f2e5b5;
+          border-radius: 10px;
+        }
+
+        .gram-top {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 60px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+
+        .gram-middle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80px;
+          height: 80px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+
+        .gram-bottom {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 60px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+
+        .snack {
+          width: 50px;
+          height: 50px;
+          background-color: #f2e5b5;
+          border-radius: 50%;
+          margin-left: -25px;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+          position: relative;
+          animation: snack-animation 2s ease-in-out infinite;
+        }
+
+        @keyframes snack-animation {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gram">
+            <div class="gram-top"></div>
+            <div class="gram-middle"></div>
+            <div class="gram-bottom"></div>
+        </div>
+        <div class="snack"></div>
+    </div>
+</body>
+</html>
